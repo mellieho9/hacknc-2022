@@ -1,0 +1,469 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+canvas {
+  height: 40vh;
+  width: 100vw;
+  margin-bottom: -2vh;
+}
+
+.landing {
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+#particles {
+  z-index: 1;
+}
+
+.landing-particles {
+  width: 100vw;
+  height: 110vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.submarine {
+  position: absolute;
+  top: 15vh;
+  right: 10vw;
+  animation: slide_in 5s;
+}
+
+.old-well {
+  position: absolute;
+  left: -2vw;
+  top: 5vh;
+  height: 110vh;
+}
+
+.corals {
+  position: absolute;
+  right: 0;
+  bottom: 1.75vh;
+  width: 70vw;
+}
+
+#canvas2 {
+  transform: rotate(180deg);
+}
+
+@keyframes slide_in
+{
+  0%
+  {
+    right: -25%;
+  }
+  100%
+  {
+    right: 10vw;
+  }
+}
+
+.fish {
+  position: absolute;
+}
+
+.fish1 {
+  top: 30%;
+  height: 120px;
+  animation: swim_left 10s linear infinite;
+}
+
+.fish2 {
+  top: 50%;
+  height: 60px;
+  animation: swim_left 25s linear infinite;
+}
+
+.fish3 {
+  top: 25%;
+  height: 80px;
+  animation: glide 35s linear infinite;
+}
+
+.fish4 {
+  top: 70%;
+  height: 80px;
+  animation: swim_right 20s linear infinite;
+}
+
+.fish5 {
+  top: 30%;
+  height: 80px;
+  animation: swim_right 18s linear infinite;
+}
+
+@keyframes swim_left
+{
+  0%
+  {
+    transform: translateY(-50px);
+    left: -25%;
+  }
+  25%
+  {
+    transform: translateY(0px);
+  }
+  50%
+  {
+    transform: translateY(50px);
+  }
+  75%
+  {
+    transform: translateY(0px);
+  }
+  100%
+  {
+    transform: translateY(-50px);
+    left: 125%;
+  }
+}
+
+@keyframes swim_right
+{
+  0%
+  {
+    transform: translateY(-50px);
+    right: -25%;
+  }
+  25%
+  {
+    transform: translateY(0px);
+  }
+  50%
+  {
+    transform: translateY(50px);
+  }
+  75%
+  {
+    transform: translateY(0px);
+  }
+  100%
+  {
+    transform: translateY(-50px);
+    right: 125%;
+  }
+}
+
+@keyframes glide
+{
+  0%
+  {
+    transform: translateY(-25px);
+    left: -25%;
+  }
+  25%
+  {
+    transform: translateY(0px);
+  }
+  50%
+  {
+    transform: translateY(25px);
+  }
+  75%
+  {
+    transform: translateY(0px);
+  }
+  100%
+  {
+    transform: translateY(-25px);
+    left: 125%;
+  }
+}
+
+/* faq */
+
+.accordion {
+    background-color: #83DEF1;
+    color: #012a3b;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    width: 40vw;
+    border-radius: 20px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #2999BC !important; 
+    color: white;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    max-height: 0;
+    background-color: white;
+    overflow: hidden;
+    width: 35vw;
+    transition: max-height 0.5s ease-out;
+    color: #012a3b;
+  }
+
+  .HackNCButton2020 {
+    background-color: #006A94;
+    border-radius:5px;
+    display:block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:22px;
+    padding: 1rem 1rem;
+    text-decoration:none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+  }
+  .HackNCButton2020:hover {
+    background-color: #2999bc;
+  }
+  .HackNCButton2020:active {
+    position:relative;
+    top:1px;
+  }
+
+.image1 {
+  display: inline;
+  width: 25vw;
+  animation: tilt 2s linear infinite;
+}
+
+.sponsor-img {
+  max-width: 20vw;
+  padding: 1.5rem;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+.image2 {
+  display: none;
+}
+
+.right-div {
+  flex: 70%;
+  margin-left: 2rem;
+}
+
+.past-winner-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 90vw;
+}
+
+.accord {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.panell {
+  max-Height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  color: white !important;
+}
+
+.track-box {
+  border-radius: 10px;
+  background-color: #2999BC;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  width: 25vw;
+}
+
+.track-box:active {
+position:relative;
+top:1px;
+}
+
+.track-box:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+
+.track {
+  font-size: 3rem;
+  letter-spacing: normal;
+  color: white !important;
+}
+
+  td {
+    width: 5vw;
+    text-align: center;
+    padding: 0 1vw;
+  }
+
+  .number-slot {
+    line-height: 1.2em;
+    overflow: hidden;
+    height: 1.2em;
+  }
+  .number-slot .number {
+    position: relative;
+  }
+
+  @keyframes slideDown {
+    0% {margin-top: 0em;}
+    30% {margin-top: -1.2em;}
+    100% {margin-top: -1.2em;}
+  }
+  .slide-number {
+    animation: slideDown 1.5s;
+  }
+
+  .count-num {
+    color: #012a3b;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+  }
+
+  tr {
+    padding: 0;
+  }
+
+  .countdown {
+    text-align: center;
+  }
+
+  .faq-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: auto; 
+    display: inline-block; 
+  }
+
+  .spin {
+    animation-duration: 500ms;
+    animation-name: spin;
+    animation-timing-function: linear;
+  }
+
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+
+  .faq-text {
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.25rem;
+    padding-left: 0.75rem;
+  }
+
+  .faq-container {
+    font-size: 1.15rem;
+    background-color: #83DEF1;
+    padding: 0.75rem;
+    display: inline-block;
+    max-width: 35vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .accordion {
+      width: 90vw;
+    }
+
+    .faq-container {
+      max-width: 90vw !important;
+      width: 90vw;
+    }
+
+    .panel {
+      width: 90vw;
+    }
+
+    .image1 {
+        display: none;
+    }
+
+    .image2 {
+      display: inline;
+      width: 75vw;
+      margin-top: 2rem;
+    }
+
+    .right-div {
+      margin: 0;
+    }
+
+    .sponsor-sec {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .sponsor-img {
+      max-width: 45vw;
+  }
+    
+    .track-box {
+        width: 77vw !important;
+      }
+
+      .landing {
+        opacity: 90%;
+        background-image: url("../assets/images/mobile-landing.png");
+        background-position: center;
+    }
+
+    .faq-text {
+      margin-top: 0.5rem !important;
+    }
+    
+    .submarine {
+      display: none;
+    }
+
+    .fish {
+      display: none;
+    }
+
+    #particles {
+      display: none;
+    }
+
+    canvas {
+      height: 20vh;
+    }
+
+  }

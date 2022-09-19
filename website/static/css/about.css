@@ -1,0 +1,164 @@
+.teampic {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+}
+
+.about-pic {
+    width: 35vw;
+}
+
+.name {
+    color: #2999BC;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 0.9rem;
+}
+
+.team-pics-table {
+    text-align: center;
+    align-items: center;
+    display: inline;
+}
+
+.text {
+    font-size: 1rem;
+}
+.header {
+    background-image: url("../assets/images/templandingpage.webp");
+    background-size: cover;
+    height:30vh;
+
+}
+.history {
+    background-image: url("../assets/images/tempgraphic.jpg");
+    background-size:80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+}
+.box {
+    background-color: paleturquoise;
+    width:80%;
+}
+div.slideshowContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    padding: 3%;
+    border-radius: .5em;
+}
+
+div.divContainer {
+    width: 30%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #723D46;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.slideshowimg {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.next {
+    right: 0;
+    margin-right: 50px;
+}
+
+.fade {
+    animation-name: moveRight;
+    animation-duration: 1s;
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.purpose {
+    margin-top: 0;
+}
+
+.mobile-team-pics {
+    display: none;
+}
+
+.member-div {
+    padding: 2rem;
+    border-collapse: separate;
+}
+
+.mobile-team-pics {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-pic {
+        width: 75vw;
+    }
+
+    .purpose {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 5rem;
+    }
+
+    .mobile-team-pics {
+        display: inline;
+        text-align: center;
+        align-items: center;
+    }
+
+    .team-pics-table {
+        display: none;
+    }
+
+    .teampic {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
+    }
+    
+    .name {
+        color: #2999BC;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    
+    .title {
+        font-size: 1.15rem;
+    }
+
+    .badge {
+        display: none !important;
+      }
+    
+}

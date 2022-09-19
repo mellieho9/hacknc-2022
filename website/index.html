@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=0">
+
+    <meta property="og:url" content="https://hacknc.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HackNC 2022">
+    <meta property="og:description" content="UNC-Chapel Hill's Annual Fall Hackathon" />
+
+    <link rel="icon" type="image/x-icon" href="./static/assets/images/icons/favicon.ico">
+
+    <title>HackNC 2022</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/nav.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+
+    <script src="https://kit.fontawesome.com/be677f01a1.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./static/js/mobile-menu.js"></script>
+    <script type="text/javascript" src="./static/js/home-sticky-nav.js"></script>
+    <script type="text/javascript" src="./static/js/include.js"></script>
+    <script type="text/javascript" src="./static/js/toggle-panels.js"></script>
+    <script type="text/javascript" src="./static/js/countdown.js"></script>
+    <script src="./static/js/waves.js"></script>
+</head>
+
+<a id="mlh-trust-badge" class="badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:15px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-gray.svg" alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
+
+<body>
+
+    <main id="content container">
+
+        <div class="nav-container">
+
+            <a class="logo-flex" href="./index.html">
+                <img class="logo" src="./static/assets/images/icons/logo.png">
+            </a>
+        
+            <nav class="nav-bar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link"href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link"  style="color: #012a3b" href="live.html">Live</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://tinyurl.com/hacknc2022" target="_blank">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="landing section" id="landing">
+            <div id="particles" class="landing-particles">
+                <img src="./static/assets/images/fish1.png" class="fish fish1">
+                <img src="./static/assets/images/fish2.png" class="fish fish2">
+                <img src="./static/assets/images/fish3.png" class="fish fish3">
+                <img src="./static/assets/images/fish4.png" class="fish fish4">
+                <img src="./static/assets/images/fish5.png" class="fish fish5">
+                <img src="./static/assets/images/submarine.png" class="submarine">
+                <img src="./static/assets/images/old-well-coral-reef.png" class="old-well">
+                <img src="./static/assets/images/foreground-corals.png" class="corals">
+            </div>
+
+            <div class="row mobile-bar">
+                <img src='./static/assets/images/icons/hamburger.svg' id='hamburger' class='hamburger' onClick="showMobileMenu()" />
+                <nav class="mobile-nav" id="mobile-nav">
+                    <img src='./static/assets/images/icons/x.svg' id='hamburger-x' class='hamburger-x' onClick="closeMobileMenu()" />
+                        <a class="mobile-nav-link" href="index.html">Home</a><br>
+                        <a class="mobile-nav-link" href="about.html">About</a><br>
+                        <a class="mobile-nav-link" href="schedule.html">Schedule</a><br>
+                        <a class="mobile-nav-link" href="live.html">Live</a><br>
+                        <a class="mobile-nav-link" href="resources.html">Resources</a><br>
+                        <a class="mobile-nav-link" href="https://tinyurl.com/hacknc2022" target="_blank">Register</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="./static/js/particles.js"></script>
+        <script type="text/javascript" src="./static/js/background.js"></script>
+        <script type="text/javascript" src="./static/js/footer.js"></script>
+
+        <div class="section countdown">
+            <div class="flex-container">
+
+                <h3 style="margin-top: 2rem;">Countdown</h3>
+
+                <table id="countdown" class="countdown">
+                    <tr>
+                        <td><p id="days" class="count-num"></p></td>
+                        <td><p id="hours" class="count-num"></p></td>
+                        <td>
+                            <div class="number-slot count-num" id="minutes">
+                                <div class="number" id="currentMin">0</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="number-slot count-num" id="seconds">
+                                <div class="number">0</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>DAYS</p></td>
+                        <td><p>HOURS</p></td>
+                        <td><p>MINUTES</p></td>
+                        <td><p>SECONDS</p></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <canvas id="canvas"></canvas>
+
+        <div class="section" style="background-color: rgba(59,181,197,255)">
+
+            <div class="about-container" style="margin-top: 0">
+                <div style="flex: 30%">
+                    <img class="image1" src="./static/assets/images/ram.png">
+                </div>
+                <div class="right-div">
+                    <h3>What is HackNC?</h3>
+                    <p style="color: #012a3b">HackNC is an annual, student-run hackathon hosted by the University of North Carolina at
+                        Chapel Hill. Every fall, hundreds of students arrive at UNC to spend the weekend inventing something amazing. We’re one of the
+                        largest hackathons in the southeastern United States.</p>
+                    <br>
+                    <a href="./about.html" class="HackNCButton2020" style="margin-left: 0" target="_blank">
+                        More About Us
+                    </a>
+                </div>
+                <img class="image2" src="./static/assets/images/ram.png">
+            </div>
+        </div>
+
+        <canvas id="canvas2"></canvas>
+
+        <!-- <img src="./static/assets/images/bottom.svg" style="margin-top: -25px"/> -->
+
+        <div class="section">
+            <div class="flex-container">
+                <h3>FAQs</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">What is a hackathon?</p>
+                        </div>
+                        <div class="panel">
+                            <p>A hackathon is a weekend of fun and learning. You'll become a better programmer, meet
+                                awesome people, and make cool stuff. There will also be opportunities to win cool prizes
+                                and network with our sponsors.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">Is this hackathon in-person or hybrid?</p>
+                        </div>
+                        <div class="panel">
+                            <p>This year, we are returning to a completley in-person hackathon! We have lots of fun events and workshops for you all and most importantly, free food!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">Will there still be swag?</p>
+                        </div>
+                        <div class="panel">
+                            <p>Yes, although we are only able to ship to within the continental United States. Make sure
+                                to indicate that you are interested in recieving swag when you apply.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">What if I've never hacked before?</p>
+                        </div>
+                        <div class="panel">
+                            <p>That's totally fine! We'll have plenty of resources to help you get started, including
+                                beginner workshops, mentors, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">Can I hack?</p>
+                        </div>
+                        <div class="panel">
+                            <p>High schoolers over 18, undergraduates, and graduate students are welcome to participate
+                                as hackers. Professionals interested in mentorship should click the "Get Involved" link
+                                in the navbar to get started.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">What is a track?</p>
+                        </div>
+                        <div class="panel">
+                            <p>At a hackathon, a track is designed to help focus your ideas into one specific subject
+                                area. We have three tracks for you to choose from, including a general one intended for
+                                projects that don’t fit into one of the other two.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">How do teams work?</p>
+                        </div>
+                        <div class="panel">
+                            <p>Teams can be organized prior to HackNC or during the event itself. We will host team
+                                building and pitch events before hacking begins. We don’t hold a strict limit on your
+                                team size, but we strongly recommend around 3-4 members. Prizes will be limited to a
+                                maximum of 4 members.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">Can I do a hardware hack?</p>
+                        </div>
+                        <div class="panel">
+                            <p>Unfortunately, we are unable to provide hardware this year due to the hybrid nature of
+                                our hackathon. However, you are still welcome to use your own hardware if you really
+                                want to!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">Can I use old code?</p>
+                        </div>
+                        <div class="panel">
+                            <p>You may use all the publicly available code and APIs that you want, but the code you will
+                                be judged on at the end of the hackathon must be new.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="faq-container accordion">
+                            <img class="faq-icon" src="./static/assets/images/icons/shell.png"/>
+                            <p class="faq-text">You didn’t answer my question!</p>
+                        </div>
+                        <div class="panel">
+                            <p>Email us at <a class="footer-email" href="mailto:hello@hacknc.com">hello@hacknc.com</a>. We’ll be happy to
+                                answer all of your questions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="flex-container">
+                <h3>Tracks</h3>
+                <div class="past-winner-container">
+                    <div class="track-box" onClick="togglepanel1()">
+                        <h1 class="track">General</h1>
+                        <div class="panell" id="panel1">
+                            <p>Think about some common problems that we face in today's world and possible solutions to
+                                them. Some common focus areas are health, sustainability, finance, and entertainment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="track-box" onClick="togglepanel2()">
+                        <h1 class="track">Beginners</h1>
+                        <div class="panell" id="panel2">
+                            <p>If you're having trouble thinking of a beginner-friendly project, you could make a simple
+                                game, mobile app, or website! Check out our simple workshops and coding resources for
+                                great starting points.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<div class="section">
+            <div class="flex-container">
+                <h3>Sponsors</h3>
+                <p class="sponsor-sec">Interested in sponsoring HackNC? Email us at <a
+                        href="mailto:sponsorship@hacknc.com">sponsorship@hacknc.com</a>.</p>
+            </div>
+            <br>
+            <div class="sponsor-container">
+                <a href="https://www.accenture.com/" target="_blank"><img class="sponsor-img"
+                        src="./static/assets/images/sponsors/accenture.png"></a>
+                <a href="https://www.db.com/" target="_blank"><img class="sponsor-img"
+                        src="./static/assets/images/sponsors/deutschebank.jpg"></a>
+                <a href="https://www.genesys.com/" target="_blank"><img class="sponsor-img"
+                        src="./static/assets/images/sponsors/genesys.png"></a>
+                <a href="https://ktp.cs.unc.edu/" target="_blank"><img class="sponsor-img"
+                        src="./static/assets/images/sponsors/ktp.jpg"></a>
+                <a href="https://www.optum.com/" target="_blank"><img class="sponsor-img"
+                        src="./static/assets/images/sponsors/optum.png"></a>
+                <a href="https://ultrapress.com/" target="_blank"><img class="sponsor-img"
+                        src="./static/assets/images/sponsors/ultrapress.png"></a>
+            </div>
+        </div>-->
+
+        <div class="footer">
+
+            <div class="footer-row">
+                <div style="flex: 40vw; text-align: center; margin-left: 5vw;">
+                    <br>
+                    <h1 class="footer-title">HackNC 2022</h1>
+                    <p class="footer-text"> Contact us at <a class="footer-email"
+                            href="mailto:hello@hacknc.com">hello@hacknc.com!</a></p>
+                            <p style="font-size: 1rem"><a class="footer-link" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH code of conduct</a></p>
+                </div>
+    
+                <div style="flex: 20vw;  margin-left: 5vw;">
+        
+                    <h2 class="footer-text">Site Map</h2>
+                    <a class="footer-link" href="./index.html">Home</a><br>
+                    <a class="footer-link" href="./about.html">About</a><br>
+                    <a class="footer-link" href="./schedule.html">Schedule</a><br>
+                    <a class="footer-link" href="./resources.html">Resources</a><br>
+        
+                </div>
+    
+                <div class="footer-icons">
+    
+                    <a class="footer-icon" href="https://www.facebook.com/thehacknc/" target="_blank">
+                        <i class="fa-brands fa-facebook-square fa-2xl"></i></a>
+    
+                    <a class="footer-icon" href="https://twitter.com/theHackNC" target="_blank">
+                        <i class="fa-brands fa-twitter-square fa-2xl"></i></a>
+    
+                    <a class="footer-icon" href="https://www.instagram.com/thehacknc/?hl=en" target="_blank">
+                        <i class="fa-brands fa-instagram-square fa-2xl"></i></a>
+    
+                    <a class="footer-icon" href="mailto:hello@hacknc.com" target="_blank">
+                        <i class="fa-solid fa-envelope fa-2xl"></i></a>
+    
+                </div>
+            </div>
+    
+            <br>
+       
+        </div>
+
+    </main>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        var questions = document.getElementsByClassName("panel");
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var shell = this.children[0];
+                shell.classList.toggle("spin");
+                var panel = this.nextElementSibling;
+                let maxHeight = window.getComputedStyle(panel).maxHeight;
+                console.log(maxHeight);
+                console.log(panel.style.maxHeight)
+                if (maxHeight !== '0px') {
+                    panel.style.maxHeight = 0;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    for (let j= 0; j<questions.length; j++) {
+                        if (i !== j && window.getComputedStyle(questions[j]).maxHeight !== '0px') {
+                            questions[j].style.maxHeight = 0;
+                            questions[j].previousElementSibling.classList.toggle("active")
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

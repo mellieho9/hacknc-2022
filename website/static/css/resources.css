@@ -1,0 +1,204 @@
+.accord {
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .panell {
+    max-Height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    color: white !important;
+  }
+
+  .track-box {
+    border-radius: 10px;
+    background-color: #2999BC;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    width: 25vw;
+  }
+
+.track-box:active {
+	position:relative;
+	top:1px;
+}
+
+.track-box:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.track {
+    font-size: 3rem;
+    letter-spacing: normal;
+    color: white !important;
+}
+
+.past-winner-section {
+    padding: 1.5rem;
+}
+
+.past-winner-box {
+    border-radius: 5px;
+    background-color: #a1e8f7;
+    width: 60vw;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.past-winner-box-h3 {
+    margin: 0;
+}
+
+.past-winner-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+.HackNCButton2020 {
+	background-color: #006A94;
+	border-radius:5px;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:22px;
+	padding: 1rem 1rem;
+	text-decoration:none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+}
+.HackNCButton2020:hover {
+	background-color: #2999bc;
+}
+.HackNCButton2020:active {
+	position:relative;
+	top:1px;
+}
+
+.resource-button {
+	background-color: #006A94;
+	border-radius:20px;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	padding: 1rem;
+	text-decoration:none;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  float: left;
+  text-align: center;
+  width: 15vw;
+  height: 7vw;
+}
+.resource-button:hover {
+	background-color: #2999bc;
+}
+.resource-button:active {
+	position:relative;
+	top:1px;
+}
+
+.resource-text {
+  font-size: 20px;
+}
+
+.past-event-pictures {
+    padding: 1.5rem;
+}
+
+.past-pics-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.pics-stack {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pic{
+    transition: transform 0.15s;
+    height: 40vh;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius:10px;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .track-box {
+        width: 60vw;
+      }
+
+    .HackNCButton2020 {
+        width: 60vw;
+    }
+
+    .track {
+        font-size: 2rem;
+    }
+
+    .top {
+      padding-top: 3rem;
+      padding-left: 5vw;
+  }
+
+    .pic{
+      width: 60vw;
+      height: auto; 
+  }
+
+  .past-winner-box {
+    width: 75vw;
+  }
+
+  .badge {
+    display: none !important;
+  }
+
+  }
