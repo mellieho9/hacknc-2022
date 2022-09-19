@@ -13,6 +13,7 @@ HackNC is among the largest collegiate hackathons in North Carolina. The competi
 - [x] Extract project's tech stack
 - [ ] Extract project's track
 - [ ] Identify project's field of interest
+- [ ] Debug
 
 ## Technologies used
 - Google Colab
