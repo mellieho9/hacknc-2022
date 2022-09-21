@@ -20,24 +20,18 @@
   }
 
 .prize-container {
-    font-size: 1.15rem;
     background-color: #83DEF1;
     padding: 0.75rem;
     text-align: center;
-    display: inline-block;
-    width: 28vw;
-    height: 100%;
+    display: inline-flex;
+    width: 90%;
+    height: 250px;
     border-radius: 5px;
   }
 
-ol {
-    list-style: decimal;
-    list-style-position: inside;
-}
-
 .grant-table{
     border-collapse: collapse;
-    width: 200%;
+    width: 100%;
     text-align: center;
 }
 
@@ -54,5 +48,34 @@ th {
 .table-row-odd {
     background: #f2f2f2; }
   
-  .table-row-even {
+.table-row-even {
     background: white }
+
+.live-section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1.5rem;
+  }
+
+.social-container {
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    padding: 20px; 
+    width: 100%;
+    height: 150px;  
+  }
+
+  .blue-button {
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 250px;
+  }
+  
+  .blue-button {
+    background-color: #7289da;
+    border: 2px solid #7289da;
+    color: #fff;
+  }
