@@ -1,4 +1,4 @@
-# Devpost scraping tool
+# Judge-matching tool
 A tool that scrapes Devpost project submission, outputs them as a Google Sheet file, matches the information with appropriate judge 
 
 ## Background 💡
