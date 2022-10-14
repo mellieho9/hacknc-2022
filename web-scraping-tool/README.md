@@ -18,7 +18,7 @@ HackNC is among the largest collegiate hackathons in North Carolina. The competi
 - [ ] Optimize our code
 
 ## Results 🥇
-We were able to scrape the information of 35 projects onto Google Sheets, however since the track and category information lies on the backend of Devpost, we resorted to using data (from the Devpost and Devpost-generated CSV file) of MHacks 6. Our algorithm can now scrape the title, link, project information, members, tech stack, track, and category of projects at O(N^2). It also includes a matching algorithm that can match each project to each judge accordingly to the project track at O(N^2). We are optimizing the algorithm so that we can bring the complexity down to O(logN) or O(N).
+We were able to scrape the information of 35 projects onto Google Sheets, however since the track and category information lies on the backend of Devpost, we resorted to using data (from the Devpost and Devpost-generated CSV file) of MHacks 6. Our algorithm can now scrape the title, link, project information, members, tech stack, track, and category of projects at O(3(N + N^2 + N^2)). It also includes a matching algorithm that can match each project to each judge accordingly to the project track at O(N^2). We are optimizing the algorithm so that we can bring the complexity down to O(logN) or O(N).
 
 ## What's next  🧩
 Our algorithm is currently using two data sources to populate the project information sheet. To cut down on data dependency and complexity, we intend on replacing our web scraping code with CSV manipulation functions. 
